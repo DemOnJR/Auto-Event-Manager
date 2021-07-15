@@ -1,5 +1,16 @@
-	// TRIVIA
-	
+// Add
+#ifdef ENABLE_AUTO_EVENTS
+	#ifdef ENABLE_TRIVIA
+		#include "TriviaEvent.h"
+	#endif
+#endif
+
+// Find
+	void RegisterGlobalFunctionTable(lua_State* L)
+		{
+
+// Add above
+#ifdef ENABLE_TRIVIA
 	int _add_trivia_quiz(lua_State* L)
 	{
 		const char* quiz = lua_tostring(L, 1);
@@ -18,12 +29,14 @@
 		TriviaAddReward(index, vnum, count);
 		return 1;
 	}
-	
-	// END_OF_TRIVIA
-	
-// add in > luaL_reg global_functions[] =
+#endif
 
-			// TRIVIA
+// Find 
+			{	NULL,	NULL	}
+		};
+
+// Add above
+#ifdef ENABLE_TRIVIA
 			{	"add_trivia_quiz",			_add_trivia_quiz		},
 			{	"add_trivia_reward",		_add_trivia_reward		},
-			// END_OF_TRIVIA
+#endif

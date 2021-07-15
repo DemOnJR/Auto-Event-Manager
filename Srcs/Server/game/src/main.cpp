@@ -1,4 +1,4 @@
-// add
+// Add
 #ifdef ENABLE_AUTO_EVENTS
 #include "auto_event_manager.h"
 	#ifdef ENABLE_AUTO_NOTICE
@@ -6,13 +6,13 @@
 	#endif
 #endif
 
-// find
+// Find
 	if (!start(argc, argv)) {
 		CleanUpForEarlyExit();
 		return 0;
 	}
 
-//add above:
+// Add above:
 #ifdef ENABLE_AUTO_EVENTS
 	CEventsManager	EventManager;
 	#ifdef ENABLE_AUTO_NOTICE
@@ -20,18 +20,18 @@
 	#endif
 #endif
 
-// find
+// Find
 PanamaLoad();
 
-// add bellow:
+// Add bellow:
 #ifdef ENABLE_AUTO_EVENTS
 	EventManager.Initialize();
 #endif
 
-// find
+// Find
 	building_manager.Destroy();
 	
-//add bellow:
+// Add bellow:
 #ifdef ENABLE_AUTO_EVENTS
 	sys_log(0, "<shutdown> Destroying EventManager::CEventManager...");
 	EventManager.Destroy();

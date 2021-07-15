@@ -1,17 +1,21 @@
-// Add this include:
-
-#include "TriviaEvent.h"
+// Add
+#ifdef ENABLE_AUTO_EVENTS
+	#ifdef ENABLE_TRIVIA
+		#include "TriviaEvent.h"
+	#endif
+#endif
 
 // Search:
-
 	if (CHAT_TYPE_SHOUT == pinfo->type)
 	{
 		LogManager::instance().ShoutLog(ch->GetName(), buf);
 	}
-
-// Add in if statement:
-
-		// TRIVIA
+	
+// Change like this
+	if (CHAT_TYPE_SHOUT == pinfo->type)
+	{
+		LogManager::instance().ShoutLog(ch->GetName(), buf);
+#ifdef ENABLE_TRIVIA
 		std::string stAnswer = buf;
 		int iQuizTrivia = quest::CQuestManager::instance().GetEventFlag("eveniment_trivia_q");
 		if (IsTriviaOpen() && TriviaIsEqualAnswer(iQuizTrivia, stAnswer))
@@ -22,4 +26,5 @@
 				TriviaGiveRewardRandom(ch);
 			// }
 		}
-		// END_OF_TRIVIA
+#endif
+	}
