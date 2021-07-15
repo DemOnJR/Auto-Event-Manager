@@ -1,7 +1,4 @@
-// find
-#include "DragonSoul.h"
-
-// add bellow:
+// add
 #ifdef ENABLE_AUTO_EVENTS
 #include "auto_event_manager.h"
 	#ifdef ENABLE_AUTO_NOTICE
@@ -10,13 +7,17 @@
 #endif
 
 // find
-#ifdef __AUCTION__
-	AuctionManager auctionManager;
-#endif
+	if (!start(argc, argv)) {
+		CleanUpForEarlyExit();
+		return 0;
+	}
 
-//add bellow:
+//add above:
 #ifdef ENABLE_AUTO_EVENTS
 	CEventsManager	EventManager;
+	#ifdef ENABLE_AUTO_NOTICE
+		CAutoNotice	AutoNoticeManager;
+	#endif
 #endif
 
 // find
