@@ -2,4 +2,4 @@
 
 ## Extra:  
 - Notice
-- Trivia
+- Trivia by https://github.com/Grimmjock

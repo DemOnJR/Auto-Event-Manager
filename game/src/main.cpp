@@ -4,6 +4,9 @@
 // add bellow:
 #ifdef ENABLE_AUTO_EVENTS
 #include "auto_event_manager.h"
+	#ifdef ENABLE_AUTO_NOTICE
+		#include "AutoNotice.h"
+	#endif
 #endif
 
 // find
