@@ -12,8 +12,9 @@ class CEventsManager : public singleton<CEventsManager>
 		SUNDAY = 0,
 	};
 
-	public :
+	public:
 		bool		Initialize();
+		void		Check(int day, int hour, int minute, int second);
 		void		Destroy();
 		void		PrepareChecker();
 
