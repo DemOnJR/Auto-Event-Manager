@@ -59,11 +59,8 @@ void CAutoNotice::HourlyAnnouncement(int minute, int second)
 
 	if ((int)AutoNoticeSettings::HOURLY_MINUTE == minute)
 	{
-		// to create new line of message simply add new SendNoticeLine function here
-
-		SendNoticeLine("Don't feed the yangsellers. Buying from the bots damage the");
-		SendNoticeLine("server economy, spoils gameplay and you will end your game banned for it!");
-		SendNoticeLine("Visit our webpages! www.servername.com | ts3.servername.com | forum.servername.com ");
+		// To create new line of message simply add new SendNoticeLine function here
+		// SendNoticeLine("Example");
 	}
 }
 
@@ -99,11 +96,11 @@ void CAutoNotice::SpecialHourAnnoucement(int day, int hour, int minute, int seco
 
 	// maximum 5 lines of notice at once, if you set "" then this notice line not appear
 	const int MAX_NOTICE_LINE = 5;
-	char* szpNoticeText[][MAX_NOTICE_LINE] =
+	constexpr const char * szpNoticeText[][MAX_NOTICE_LINE] =
 	{
-		{ "Today from 19:00 to 19:30 we have sales in our ItemShop", "Open Ingame Itemshop and check new prices!", "", "", "" },						//szpNoticeHours[0]
-		{ "Hmm did you saw a cheater? ", "Yes? Fantastic! Please open Ticket Menager", "and send a ticket to us", "Thank you for your help.", "" },		//szpNoticeHours[1]
-		{ "The best server ", "of 2017", "is ServerName", "visit our web pages", "www.servername.com | www.forum.servername.com" }						//szpNoticeHours[2]
+		{ "1", "", "", "", "" },	//szpNoticeHours[0]
+		{ "2", "", "", "", "" },	//szpNoticeHours[1]
+		{ "3", "", "", "", "" }		//szpNoticeHours[2]
 	};
 
 	for (int i = 0; i < _countof(szpNoticeHours); i++)
@@ -158,11 +155,11 @@ void CAutoNotice::TimeIntervalAnnoucement(int day, int hour, int minute, int sec
 
 	// maximum 5 lines of notice at once, if you set "" then notice not appear
 	const int MAX_NOTICE_LINE = 5;
-	char* szpNoticeText[][MAX_NOTICE_LINE] =
+	constexpr const char * szpNoticeText[][MAX_NOTICE_LINE] =
 	{
-		{ "Special Time Notice 1.1", "Special Time Notice 1.2", "", "", "" },						//szpNoticeHours[0]
-		{ "Special Time Notice 2.1", "Special Time Notice 2.2", "Special Time Notice 2.3", "Special Time Notice 2.4", "" },	//szpNoticeHours[1]
-		{ "Special Time Notice 3.1", "Special Time Notice 3.2", "Special Time Notice 3.3", "Special Time Notice 3.4", "Special Time Notice 3.5 | Special Time Notice 3.5" }						//szpNoticeHours[2]
+		{ "1", "", "", "", "" },	//szpNoticeHours[0]
+		{ "2", "", "", "", "" },	//szpNoticeHours[1]
+		{ "3", "", "", "", "" }		//szpNoticeHours[2]
 	};
 
 	for (int i = 0; i < _countof(szpNoticeHours); i++)
