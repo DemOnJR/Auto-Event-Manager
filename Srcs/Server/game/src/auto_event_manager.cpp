@@ -7,6 +7,7 @@
 #include "config.h"
 #include "constants.h"
 #include "questmanager.h"
+#include "locale_service.h"
 
 // hmm
 #include "cmd.h"
@@ -23,7 +24,6 @@
 
 #ifdef ENABLE_TRIVIA
 #include "TriviaEvent.h"
-#include "locale_service.h"
 #endif
 
 static LPEVENT running_event = NULL;
@@ -73,7 +73,6 @@ void CEventsManager::PrepareChecker()
 #ifdef ENABLE_AUTO_NOTICE
 	CAutoNotice::instance().Check(day, hour, minute, second);
 #endif
-
 	CEventsManager::instance().Check(day, hour, minute, second);
 }
 

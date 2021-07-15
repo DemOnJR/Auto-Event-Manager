@@ -1,6 +1,5 @@
 class CEventsManager : public singleton<CEventsManager>
 {
-
 	enum
 	{
 		MONDAY = 1,
@@ -17,5 +16,4 @@ class CEventsManager : public singleton<CEventsManager>
 		void		Check(int day, int hour, int minute, int second);
 		void		Destroy();
 		void		PrepareChecker();
-
 };
