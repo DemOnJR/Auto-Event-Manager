@@ -1,5 +1,5 @@
 # Auto Event Manager
 
 ## Extra:  
-- Notice
+- Notice by TreeN
 - Trivia by https://github.com/Grimmjock
