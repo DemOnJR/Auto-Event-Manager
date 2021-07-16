@@ -96,7 +96,7 @@ void CAutoNotice::SpecialHourAnnoucement(int day, int hour, int minute, int seco
 
 	// maximum 5 lines of notice at once, if you set "" then this notice line not appear
 	const int MAX_NOTICE_LINE = 5;
-	char * szpNoticeText[][MAX_NOTICE_LINE] =
+	constexpr const char * szpNoticeText[][MAX_NOTICE_LINE] =
 	{
 		{ "1", "", "", "", "" },	//szpNoticeHours[0]
 		{ "2", "", "", "", "" },	//szpNoticeHours[1]
@@ -155,7 +155,7 @@ void CAutoNotice::TimeIntervalAnnoucement(int day, int hour, int minute, int sec
 
 	// maximum 5 lines of notice at once, if you set "" then notice not appear
 	const int MAX_NOTICE_LINE = 5;
-	char * szpNoticeText[][MAX_NOTICE_LINE] =
+	constexpr const char * szpNoticeText[][MAX_NOTICE_LINE] =
 	{
 		{ "1", "", "", "", "" },	//szpNoticeHours[0]
 		{ "2", "", "", "", "" },	//szpNoticeHours[1]
